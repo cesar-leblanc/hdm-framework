@@ -1,0 +1,363 @@
+Command line for checking that the framework is correctly installed locally (i.e., that the files are downloaded, the packages installed and the environment configured):
+
+python main.py --pipeline 'check'
+
+Command line for preprocessing the EVA database and creating both the input data and the target values (respectively as a compressed sparse row matrix and as an array object):
+
+python main.py --pipeline 'dataset'
+
+Command lines for tuning all the models and finding the optimized set of hyperparameters (given search spaces and some fixed parameters) for each individual algorithm:
+
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 1 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 100 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'relu' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'relu' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'sgd' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.01
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'mlp' --num_hidden_layers 2 --num_neurons 200 --activation_func 'sigmoid' --optimizer 'adam' --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth None --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth None --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth None --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth None --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth 100 --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth 100 --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth 100 --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'gini' --max_depth 100 --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth None --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth None --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth None --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth None --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth 100 --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth 100 --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth 100 --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 100 --criterion 'entropy' --max_depth 100 --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth None --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth None --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth None --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth None --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth 100 --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth 100 --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth 100 --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'gini' --max_depth 100 --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth None --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth None --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth None --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth None --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth 100 --min_samples_split 2 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth 100 --min_samples_split 2 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth 100 --min_samples_split 10 --max_features 'sqrt'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'rfc' --n_estimators 200 --criterion 'entropy' --max_depth 100 --min_samples_split 10 --max_features 'log2'
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.1 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.1 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.1 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.1 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.01 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.01 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.01 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth None --learning_rate 0.01 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.1 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.1 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.1 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.1 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.01 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.01 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.01 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 100 --max_depth 100 --learning_rate 0.01 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.1 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.1 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.1 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.1 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.01 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.01 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.01 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth None --learning_rate 0.01 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.1 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.1 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.1 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.1 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.01 --subsample 0.8 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.01 --subsample 0.8 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.01 --subsample 1 --colsample_bytree 0.8
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'xgb' --n_estimators 200 --max_depth 100 --learning_rate 0.01 --subsample 1 --colsample_bytree 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 3 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 3 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 3 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 3 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 5 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 5 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 5 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 8 --n_steps 5 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 3 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 3 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 3 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 3 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 5 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 5 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 5 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 8 --n_a 16 --n_steps 5 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 3 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 3 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 3 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 3 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 5 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 5 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 5 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 8 --n_steps 5 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 3 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 3 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 3 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 3 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 5 --n_independent 1 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 5 --n_independent 1 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 5 --n_independent 3 --n_shared 1
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'tnc' --n_d 16 --n_a 16 --n_steps 5 --n_independent 3 --n_shared 3
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 8 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 4 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.15 --ffn_d_hidden 16 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 8 --learning_rate_init 0.0001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.001
+python main.py --pipeline 'evaluation' --n_folds 1 --model 'ftt' --d_token 16 --attention_n_heads 8 --attention_dropout 0.3 --ffn_d_hidden 16 --learning_rate_init 0.0001
+
+Command lines for evaluating all the algorithms in order to find the optimized combination of model, encoding, metric and noise (which will be used in the following experiments):
+
+python main.py --pipeline 'evaluation' --model 'mlp' --log True"
+python main.py --pipeline 'evaluation' --model 'mlp' --binarization True"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True"
+python main.py --pipeline 'evaluation' --model 'mlp' --log True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'mlp' --binarization True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'mlp' --log True --k 3"
+python main.py --pipeline 'evaluation' --model 'mlp' --binarization True --k 3"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --k 3"
+python main.py --pipeline 'evaluation' --model 'mlp' --log True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'mlp' --binarization True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --log True"
+python main.py --pipeline 'evaluation' --model 'rfc' --binarization True"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True" 
+python main.py --pipeline 'evaluation' --model 'rfc' --log True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'rfc' --binarization True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'rfc' --log True --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --binarization True --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --log True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --binarization True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --log True"
+python main.py --pipeline 'evaluation' --model 'xgb' --binarization True"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True"
+python main.py --pipeline 'evaluation' --model 'xgb' --log True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'xgb' --binarization True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'xgb' --log True --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --binarization True --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --log True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --binarization True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --log True"
+python main.py --pipeline 'evaluation' --model 'tnc' --binarization True"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True"
+python main.py --pipeline 'evaluation' --model 'tnc' --log True --dropout 0.3" 
+python main.py --pipeline 'evaluation' --model 'tnc' --binarization True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'tnc' --log True --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --binarization True --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --log True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --binarization True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --log True"
+python main.py --pipeline 'evaluation' --model 'ftt' --binarization True"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True"
+python main.py --pipeline 'evaluation' --model 'ftt' --log True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'ftt' --binarization True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --dropout 0.3"
+python main.py --pipeline 'evaluation' --model 'ftt' --log True --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --binarization True --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --log True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --binarization True --dropout 0.3 --k 3"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --dropout 0.3 --k 3"
+
+Command lines for assessing the performance of the models by removing groups of features (i.e., species composition, location information, and environmental data):
+
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'all'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'all'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'all'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'all'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'all'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'species, location'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'species, location'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'species, location'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'species, location'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'species, location'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'species, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'species, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'species, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'species, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'species, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'location, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'location, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'location, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'location, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'location, altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'species'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'species'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'species'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'species'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'species'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'location'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'location'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'location'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'location'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'location'"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --features 'altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'rfc' --rank True --features 'altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'xgb' --rank True --features 'altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'tnc' --rank True --features 'altitude, country, ecoregion, dune, coast'"
+python main.py --pipeline 'evaluation' --model 'ftt' --rank True --features 'altitude, country, ecoregion, dune, coast'"
+
+Command lines for training the five models proposed in the academic paper (i.e., MLP, RFC, XGB, TNC and FTT) on the EVA dataset using the reciprocal rank encoding:
+
+python main.py --pipeline 'training' --model 'mlp' --rank True
+python main.py --pipeline 'training' --model 'rfc' --rank True
+python main.py --pipeline 'training' --model 'xgb' --rank True
+python main.py --pipeline 'training' --model 'tnc' --rank True
+python main.py --pipeline 'training' --model 'ftt' --rank True
+
+Command lines for making predictions with the five models proposed in the academic paper (i.e., MLP, RFC, XGB, TNC and FTT) on the NPMS dataset using the reciprocal rank encoding:
+
+python main.py --pipeline 'prediction' --model 'mlp' --rank True
+python main.py --pipeline 'prediction' --model 'rfc' --rank True
+python main.py --pipeline 'prediction' --model 'xgb' --rank True
+python main.py --pipeline 'prediction' --model 'tnc' --rank True
+python main.py --pipeline 'prediction' --model 'ftt' --rank True
+
+Command lines for training the five models proposed in the academic paper (i.e., MLP, RFC, XGB, TNC and FTT) on the EVA dataset using the reciprocal rank encoding with ten different seeds:
+
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 0
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 1
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 2
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 3
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 4
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 5
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 6
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 7
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 8
+python main.py --pipeline 'training' --model 'mlp' --rank True --seed 9
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 0
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 1
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 2
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 3
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 4
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 5
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 6
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 7
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 8
+python main.py --pipeline 'training' --model 'rfc' --rank True --random_state 9
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 0
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 1
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 2
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 3
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 4
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 5
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 6
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 7
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 8
+python main.py --pipeline 'training' --model 'xgb' --rank True --random_state 9
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 0
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 1
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 2
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 3
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 4
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 5
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 6
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 7
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 8
+python main.py --pipeline 'training' --model 'tnc' --rank True --seed 9
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 0
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 1
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 2
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 3
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 4
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 5
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 6
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 7
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 8
+python main.py --pipeline 'training' --model 'ftt' --rank True --seed 9
+
+The command line for making predictions with the expert system EUNIS-ESy (which is always the same, as the dataset needs to be modified upstream for making different experiments):
+
+Rscript Readme_Example-code.R
+
+The command lines for training and making predictions under different settings to compare the results with EUNIS-ESy (e.g., with only plant species composition or with presence-absence data):
+
+python main.py --pipeline 'training' --model 'mlp' --rank True --features 'species'
+python main.py --pipeline 'prediction' --model 'mlp' --rank True --features 'species'
+python main.py --pipeline 'training' --model 'mlp' --binarization True
+python main.py --pipeline 'prediction' --model 'mlp' --binarization True
+python main.py --pipeline 'training' --model 'mlp' --rank True --dropout 0.3
+python main.py --pipeline 'prediction' --model 'mlp' --rank True
+python main.py --pipeline 'prediction' --model 'mlp' --rank True
+
+The command line for calculating the model interpretability using different attribution algorithms (e.g., primary attributions algorithms such as integrated gradients and feature ablation):
+
+python model_interpretability.py
+
+The command line for calculating the top-1 and top-3 macro-average multiclass accuracies (i.e., the statistics are calculated for each habitat and theb averaged):
+
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --average 'macro' --k 1"
+python main.py --pipeline 'evaluation' --model 'mlp' --rank True --average 'macro' --k 3"
