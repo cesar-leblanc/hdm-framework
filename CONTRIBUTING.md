@@ -8,7 +8,7 @@ If you're interested in contributing to the project, please follow these steps:
 3. Make the necessary changes and commit them.
 4. Open a pull request, referencing the related issue if applicable.
 5. Wait for the project maintainers to review your pull request.
-6. Collaborate and adress any feedback provided.
+6. Collaborate and address any feedback provided.
 
 ## Important
 
