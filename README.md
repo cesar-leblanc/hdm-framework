@@ -258,7 +258,7 @@ hdm-framework is currently maintained by [César Leblanc](https://github.com/ces
 
 ## Structure
 
-    ┌── data                               <-Folder containing data-related scripts.
+    ┌── data                               <- Folder containing data-related scripts.
     │   ├── __init__.py                    <- Initialization script for the 'data' package.
     │   ├── load_data.py                   <- Module for loading data into the project.
     │   ├── preprocess_data.py             <- Module for data preprocessing operations.
