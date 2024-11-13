@@ -23,7 +23,7 @@
   <h1></h1>
 </div>
 
-This is the code for the framework of the paper [Phytosociology meets artificial intelligence: a deep learning classification framework for biodiversity monitoring of European flora through accurate habitat type prediction based on vegetation-plot records](https://arxiv.org/) published in Applied Vegetation Science.  
+This is the code for the framework of the paper [A deep-learning framework for enhancing habitat identification based on species composition](https://arxiv.org/) published in Applied Vegetation Science.  
 If you use this code for your work and wish to credit the authors, you can cite the paper:
 ```
 @article{leblanc2023phytosociology,
