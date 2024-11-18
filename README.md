@@ -26,15 +26,15 @@
 This is the code for the framework of the paper [A deep-learning framework for enhancing habitat identification based on species composition](https://onlinelibrary.wiley.com/doi/10.1111/avsc.12802) published in Applied Vegetation Science.  
 If you use this code for your work and wish to credit the authors, you can cite the paper:
 ```
-@article{leblanc2023phytosociology,
-  title =        {Phytosociology meets artificial intelligence: a deep learning classification framework for biodiversity monitoring of European flora through accurate habitat type prediction based on vegetation-plot records},
-  author =       {Leblanc, César and Bonnet, Pierre and Servajean, Maximilien and Joly, Alexis, and others},
-  journal =      {Applied Vegetation Science},
-  volume =       {xxx},
-  number =       {xxx},
-  pages =        {xxx--xxx},
-  year =         {2023},
-  publisher =    {Wiley Online Library}
+@article{leblanc2024deep,
+  title={A deep-learning framework for enhancing habitat identification based on species composition},
+  author={Leblanc, C{\'e}sar and Bonnet, Pierre and Servajean, Maximilien and Chytr{\`y}, Milan and A{\'c}i{\'c}, Svetlana and Argagnon, Olivier and Bergamini, Ariel and Biurrun, Idoia and Bonari, Gianmaria and Campos, Juan A and others},
+  journal={Applied Vegetation Science},
+  volume={27},
+  number={3},
+  pages={e12802},
+  year={2024},
+  publisher={Wiley Online Library}
 }
 ```
 This framework aims to facilitate the training and sharing of Habitat Distribution Models (HDMs) using various types of input covariates including cover abundances of plant species and information about plot location.
