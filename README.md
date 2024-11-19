@@ -291,7 +291,7 @@ hdm-framework is currently maintained by [César Leblanc](https://github.com/ces
     │   ├── world_seas.dbf                 <- Database file for world seas data.
     │   ├── world_seas.prj                 <- Projection file for world seas shapefile.
     │   ├── world_seas.shp                 <- Shapefile for world seas data.
-    │   └── world_seas.shx                 <- Python script (details needed).
+    │   └── world_seas.shx                 <- Index file for world seas shapefile.
     │
     ├── Experiments                        <- Folder for experiment-related files.
     │   ├── ESy                            <- Folder containing the expert system.
