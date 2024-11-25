@@ -158,7 +158,7 @@ python main.py --pipeline 'training'
 
 Some changes can be made from this command to train another classifier. Here is an example to train a Random Forest Classifier with 50 trees using the cross-entropy loss:
 ```script
-python main.py --pipeline 'training' --model 'rfc' --n_estimators 50 -- criterion 'log_loss'
+python main.py --pipeline 'training' --model 'rfc' --n_estimators 50 --criterion 'log_loss'
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
