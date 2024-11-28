@@ -39,27 +39,27 @@ If you use this code for your work and wish to credit the authors, you can cite 
 ```
 This framework aims to facilitate the training and sharing of Habitat Distribution Models (HDMs) using various types of input covariates including cover abundances of plant species and information about plot location.
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Data](#data)
-- [Installation](#installation)
-- [Examples](#examples)
+- [Prerequisites](#⏪-prerequisites)
+- [Data](#📊-data)
+- [Installation](#🔧-installation)
+- [Examples](#🎒-examples)
   - [Dataset](#dataset)
   - [Evaluation](#evaluation)
   - [Training](#training)
   - [Prediction](#prediction)
-- [Models](#models)
-- [Roadmap](#roadmap)
-- [Unlicense](#unlicense)
-- [Contributing](#contributing)
-- [Troubleshooting](#troubleshooting)
-- [Team](#team)
-- [Structure](#structure)
+- [Models](#🧠-models)
+- [Roadmap](#🚆-roadmap)
+- [Unlicense](#🤲-unlicense)
+- [Contributing](#👫-contributing)
+- [Troubleshooting](#⚠️-troubleshooting)
+- [Team](#🏢-team)
+- [Structure](#🚧-structure)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Prerequisites
+## ⏪ Prerequisites
 
 Python version 3.7 or higher and CUDA are required.
 
@@ -77,7 +77,7 @@ If it is not, make sure to follow the instructions [here](https://developer.nvid
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Data
+## 📊 Data
 
 The framework is optimized for data files from the European Vegetation Archive (EVA). These files contain all the information required for the proper functioning of the framework, i.e., for each vegetation plot the full list of vascular plant species, the estimates of cover abundance of each species, the location and the EUNIS classification. Once the database is downloaded (more information [here](http://euroveg.org/eva-database)), make sure you rename species and header data files respectively as `eva_species.csv` and `eva_header.csv`. All columns from the files are not needed, but if you decide to remove some of them to save space on your computer, make sure that the values are still tab-separated and that you keep at least:
 - the columns `PlotObservationID`, `Matched concept` and `Cover %` from the species file (vegetation-plot data)
@@ -85,7 +85,7 @@ The framework is optimized for data files from the European Vegetation Archive (
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Installation
+## 🔧 Installation
 
 Firstly, `hdm-framework` can be installed via repository cloning:
 ```script
@@ -118,7 +118,7 @@ Make sure to place the species and header data files inside the `Datasets` folde
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Examples
+## 🎒 Examples
 
 ### Dataset
 
@@ -183,7 +183,7 @@ python main.py --pipeline 'prediction' --model 'xgb' --features 'species' --gbif
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Models
+## 🧠 Models
 
 This section lists every major frameworks/libraries used to create the models included in the project:
 
@@ -195,7 +195,7 @@ This section lists every major frameworks/libraries used to create the models in
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Roadmap
+## 🚆 Roadmap
 
 This roadmap outlines the planned features and milestones for the project. Please note that the roadmap is subject to change and may be updated as the project progress.
 
@@ -229,19 +229,19 @@ This roadmap outlines the planned features and milestones for the project. Pleas
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Unlicense
+## 🤲 Unlicense
 
 This framework is distributed under the Unlicense, meaning that it is dedicated to public domain. See `UNLICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contributing
+## 👫 Contributing
 
 If you plan to contribute new features, please first open an issue and discuss the feature with us. See `CONTRIBUTING.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Troubleshooting
+## ⚠️ Troubleshooting
 
 It is strongly unadvised to:
 - not perform normalization of species names against the GBIF backbone, as it could become a major obstacle in your ecological studies if you seek to combine multiple datasets
@@ -249,14 +249,14 @@ It is strongly unadvised to:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Team
+## 🏢 Team
 
 hdm-framework is a community-driven project with several skillful engineers and researchers contributing to it.  
 hdm-framework is currently maintained by [César Leblanc](https://github.com/cesar-leblanc) with major contributions coming from [Alexis Joly](https://github.com/alexisjoly), [Pierre Bonnet](https://github.com/bonnetamap), [Maximilien Servajean](https://github.com/maximiliense), and the amazing people from the [Pl@ntNet Team](https://github.com/plantnet) in various forms and means.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Structure
+## 🚧 Structure
 
     ┌── data                               <- Folder containing data-related scripts.
     │   ├── __init__.py                    <- Initialization script for the 'data' package.
