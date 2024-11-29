@@ -41,21 +41,21 @@ This framework aims to facilitate the training and sharing of Habitat Distributi
 
 ## 📚 Table of Contents
 
-- [Prerequisites](#⏪-prerequisites)
-- [Data](#📊-data)
-- [Installation](#🔧-installation)
-- [Examples](#🎒-examples)
+- [Prerequisites](#-prerequisites)
+- [Data](#-data)
+- [Installation](#-installation)
+- [Examples](#-examples)
   - [Dataset](#dataset)
   - [Evaluation](#evaluation)
   - [Training](#training)
   - [Prediction](#prediction)
-- [Models](#🧠-models)
-- [Roadmap](#🚆-roadmap)
-- [Unlicense](#🤲-unlicense)
-- [Contributing](#👫-contributing)
-- [Troubleshooting](#⚠️-troubleshooting)
-- [Team](#🏢-team)
-- [Structure](#🚧-structure)
+- [Models](#-models)
+- [Roadmap](#-roadmap)
+- [Unlicense](#-unlicense)
+- [Contributing](#-contributing)
+- [Troubleshooting](#%EF%B8%8F-troubleshooting)
+- [Team](#-team)
+- [Structure](#-structure)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
