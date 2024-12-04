@@ -53,7 +53,7 @@ This framework aims to facilitate the training and sharing of Habitat Distributi
 - [Roadmap](#-roadmap)
 - [Unlicense](#-unlicense)
 - [Contributing](#-contributing)
-- [Troubleshooting](#%EF%B8%8F-troubleshooting)
+- [Troubleshooting](#-troubleshooting)
 - [Team](#-team)
 - [Structure](#-structure)
 
@@ -241,7 +241,7 @@ If you plan to contribute new features, please first open an issue and discuss t
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## ⚠️ Troubleshooting
+## 🚥 Troubleshooting
 
 It is strongly unadvised to:
 - not perform normalization of species names against the GBIF backbone, as it could become a major obstacle in your ecological studies if you seek to combine multiple datasets
