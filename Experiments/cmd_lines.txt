@@ -357,7 +357,7 @@ The command line for calculating the model interpretability using different attr
 
 python model_interpretability.py
 
-The command line for calculating the top-1 and top-3 macro-average multiclass accuracies (i.e., the statistics are calculated for each habitat and theb averaged):
+The command line for calculating the top-1 and top-3 macro-average multiclass accuracies (i.e., the statistics are calculated for each habitat and then averaged):
 
 python main.py --pipeline 'evaluation' --model 'mlp' --rank True --average 'macro' --k 1"
 python main.py --pipeline 'evaluation' --model 'mlp' --rank True --average 'macro' --k 3"
