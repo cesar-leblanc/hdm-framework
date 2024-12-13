@@ -413,7 +413,7 @@ def get_model_parameters(args, n_features, n_outputs):
             "predictor": args.predictor,  # The value forces XGBoost to use specific predictor
             "enable_categorical": args.enable_categorical,  # The support for categorical data
             "feature_types": args.feature_types,  # The value used for specifying feature types without constructing a dataframe
-            "max_cat_to_onehot": args.max_cat_to_onehot,  # he threshold for deciding whether XGBoost should use one-hot encoding based split for categorical data
+            "max_cat_to_onehot": args.max_cat_to_onehot,  # The threshold for deciding whether XGBoost should use one-hot encoding based split for categorical data
             "max_cat_threshold": args.max_cat_threshold,  # The maximum number of categories considered for each split
             "eval_metric": args.eval_metric,  # The metric used for monitoring the training result and early stopping
             "early_stopping_rounds": args.early_stopping_rounds,  # The early stopping activation
@@ -498,7 +498,7 @@ def get_fit_parameters(args, X_train, X_test, y_train, y_test):
             'eval_set': [(X_test, y_test)],  # Evaluation set
             'eval_name': args.eval_name,  # The list of eval set names
             'eval_metric': args.eval_metric,  # The list of evaluation metrics
-            'max_epochs': args.max_epochs,  # The maximum number of epochs for trainng
+            'max_epochs': args.max_epochs,  # The maximum number of epochs for training
             'patience': args.patience,  # The number of consecutive epochs without improvement before performing early stopping
             'weights': args.weights,  # The sampling parameter
             'loss_fn': get_criterion(args, y_train),  # The loss function for training
