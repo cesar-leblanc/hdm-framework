@@ -119,11 +119,11 @@ def get_eva_header(args, eunis_habitats):
     eva_header = eva_header[eva_header['Cover abundance scale'] != 'Presence/Absence']  # Remove any rows where the 'Cover abundance scale' column has a value of 'Presence/Absence'
     eva_header["Date of recording"] = eva_header["Date of recording"].str.replace(':', '', regex=True).apply(lambda x: int(x[-4:]))  # Extract the year from the 'Date of recording' column and convert it to an integer
     eva_header = eva_header.loc[eva_header['Date of recording'] >= args.min_year]  # Remove any rows where the year in the 'Date of recording' column is less than the minimum year specified by the 'args' argument
-    split_eva_header = eva_header['Expert System'].str.split(',', expand=True)  # Create a new dataframe for each split value in the 'classes' column
+    split_eva_header = eva_header['Expert System'].str.split(',', expand=True)  # Create a new dataframe for each split value in the 'Expert System' column
     split_eva_header = split_eva_header.stack().reset_index(level=1, drop=True).rename('Expert System')  # Stack the resulting dataframes vertically and rename the columns
     eva_header = eva_header.drop('Expert System', axis=1).join(split_eva_header)  # Join the original dataframe with the split dataframe on the index
     eva_header = eva_header.loc[eva_header['Expert System'].isin(eunis_habitats)]  # Filter out rows where the 'Expert System' column is not in the list of EUNIS habitats
-    counts = eva_header['Expert System'].value_counts()  # Count the number of occurrences of each unique value in the 'classes' column
+    counts = eva_header['Expert System'].value_counts()  # Count the number of occurrences of each unique value in the 'Expert System' column
     keep = counts[counts >= args.occurrences].index.tolist()  # Keep only the values that appear 10 times or more
     eva_header = eva_header[eva_header['Expert System'].isin(keep)]  # Filter the dataframe to keep only the rows with values in the 'Expert System' column that appear 10 times or more
     eva_header = eva_header.astype(header_types)  # Convert the data types of the dataframe columns to the specified types
