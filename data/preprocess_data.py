@@ -362,7 +362,7 @@ def add_gbif_normalization(df_species, eva_to_gbif_species):
     parameter = "name"  # Define the parameters for our API call
     url = f"{base}/{api}/{function}?{parameter}="  # Define the URL
     species_df = pd.unique(df_species['Matched concept'])  # Get unique species names from the DataFrame column
-    species_gbif = []  # Initilize an empty list to store GBIF species names
+    species_gbif = []  # Initialize an empty list to store GBIF species names
     print()
     for species in tqdm.tqdm(species_df, desc="GBIF normalization"):  # Iterate over species names, displaying progress with tqdm
         url = url.replace(url.partition('name')[2], f'={species}')  # Construct the URL for GBIF API with the species name
