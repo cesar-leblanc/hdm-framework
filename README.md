@@ -67,7 +67,7 @@ On many systems Python comes pre-installed. You can try running the following co
 ```script
 python --version
 ```
-If Python is not already installed or if it is installed with version 3.6 or lower, you will need to install a functional version Python on your system by following the [official documentation](https://www.python.org/downloads/) that contains a detailed guide on how to setup Python.
+If Python is not already installed or if it is installed with version 3.6 or lower, you will need to install a functional version of Python on your system by following the [official documentation](https://www.python.org/downloads/) that contains a detailed guide on how to setup Python.
 
 To check whether CUDA is already installed or not on your system, you can try running the following command:
 ```script
@@ -127,7 +127,7 @@ To pre-process the data from the European Vegetation Archive and create the inpu
 python main.py --pipeline 'dataset' 
 ```
 
-Some changes can be made from this command to create another dataset. Here is an example to only keep vegetation plots from France and Germany who were recorded after 2000 and classified to the level 2 of the EUNIS hierarchy:
+Some changes can be made from this command to create another dataset. Here is an example to only keep vegetation plots from France and Germany that were recorded after 2000 and classified to the level 2 of the EUNIS hierarchy:
 ```script
 python main.py --pipeline 'dataset' --countries 'France, Germany' --min_year 2000 --level 2
 ```
@@ -197,7 +197,7 @@ This section lists every major frameworks/libraries used to create the models in
 
 ## 🚆 Roadmap
 
-This roadmap outlines the planned features and milestones for the project. Please note that the roadmap is subject to change and may be updated as the project progress.
+This roadmap outlines the planned features and milestones for the project. Please note that the roadmap is subject to change and may be updated as the project progresses.
 
 - [ ] Implement multilingual user support
     - [x] English
