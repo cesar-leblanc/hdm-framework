@@ -85,7 +85,7 @@ def set_ohe_dune(args, ohe_dune):
         ohe_dune (sklearn.preprocessing._encoders.OneHotEncoder): OneHotEncoder object for dune.
     """
     ohe_dune_filepath = args.data_filepath + 'ohe_dune.pkl'  # Define the file path to save the OneHotEncoder object for dune
-    with open(ohe_dune_filepath, 'wb') as f:  # Save the OneHotEncoder object using pickles
+    with open(ohe_dune_filepath, 'wb') as f:  # Save the OneHotEncoder object using pickle
         pickle.dump(ohe_dune, f)
 
 def set_ohe_coast(args, ohe_coast):
