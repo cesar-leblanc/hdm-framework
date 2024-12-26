@@ -42,7 +42,7 @@ class FTT(rtdl.FTTransformer):
             head_normalization (str, optional): The normalization used in the heads. Defaults to 'LayerNorm'.
             d_out (int, optional): The number of output classes. Defaults to None.
         """
-        feature_tokenizer = rtdl.FeatureTokenizer(  # The odule combining `NumericalFeatureTokenizer` and `CategoricalFeatureTokenizer`
+        feature_tokenizer = rtdl.FeatureTokenizer(  # The module combining `NumericalFeatureTokenizer` and `CategoricalFeatureTokenizer`
             n_num_features=n_num_features,  # The number of input features
             cat_cardinalities=cat_cardinalities,  # The number of unique values for each feature
             d_token=d_token  # The size of one token
@@ -58,7 +58,7 @@ class FTT(rtdl.FTTransformer):
             ffn_dropout=ffn_dropout,  # The dropout rate after the first linear layer in the Feed-Forward Network module
             ffn_activation=ffn_activation,  # The activation used in the Feed-Forward Network
             ffn_normalization=ffn_normalization,  # The normalization used in the Feed-Forward Network
-            residual_dropout=residual_dropout,  # The dropout rate rate for the output of each residual branch of all Transformer blocks
+            residual_dropout=residual_dropout,  # The dropout rate for the output of each residual branch of all Transformer blocks
             prenormalization=prenormalization,  # The choice to place normalizations at the beginning of each residual branch
             first_prenormalization=first_prenormalization,  # The choice to keep the first normalization from the first Transformer layer
             last_layer_query_idx=last_layer_query_idx,  # The indices of tokens that should be processed by the last Transformer block
@@ -193,7 +193,7 @@ class FTT(rtdl.FTTransformer):
         end_training = time.time()
         time_training = end_training - start_training
         if no_improvement_epochs != args.num_iter_no_change:
-            print(f'\nEarly stopping dit not occur as best epoch = {best_epoch} and best {args.metric} = {best_accuracy:.4f}%.')
+            print(f'\nEarly stopping did not occur as best epoch = {best_epoch} and best {args.metric} = {best_accuracy:.4f}%.')
         print(f"Total time of the training: {time_training:.2f}s.")
 
     def predict_model(self, args, X, y, le_species, le_header):
@@ -327,7 +327,7 @@ class FTT(rtdl.FTTransformer):
         end_fold = time.time()  # End timing the evaluation of the fold
         time_fold = end_fold - start_fold  # Calculate the time taken for the evaluation of the fold
         if no_improvement_epochs != args.num_iter_no_change:
-            print(f'\nEarly stopping dit not occur as best epoch = {best_epoch} and best {args.metric} = {best_fold_accuracy}')
+            print(f'\nEarly stopping did not occur as best epoch = {best_epoch} and best {args.metric} = {best_fold_accuracy}')
         print(f"Total time for the evaluation of the fold: {time_fold:.2f}s.")
         return best_fold_accuracy
     
