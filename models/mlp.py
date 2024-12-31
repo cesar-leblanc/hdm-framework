@@ -208,7 +208,7 @@ class MLP(torch.nn.Module):
         end_training = time.time()
         time_training = end_training - start_training
         if no_improvement_epochs != args.num_iter_no_change:
-            print(f'\nEarly stopping dit not occur as best epoch = {best_epoch} and best {args.metric} = {best_accuracy:.4f}%.')
+            print(f'\nEarly stopping did not occur as best epoch = {best_epoch} and best {args.metric} = {best_accuracy:.4f}%.')
         print(f"Total time of the training: {time_training:.2f}s.")
 
     def predict_model(self, args, X, y, le_species, le_header):
@@ -342,7 +342,7 @@ class MLP(torch.nn.Module):
         end_fold = time.time()  # End timing the evaluation of the fold
         time_fold = end_fold - start_fold  # Calculate the time taken for the evaluation of the fold
         if no_improvement_epochs != args.num_iter_no_change:
-            print(f'\nEarly stopping dit not occur as best epoch = {best_epoch} and best {args.metric} = {best_fold_accuracy}')
+            print(f'\nEarly stopping did not occur as best epoch = {best_epoch} and best {args.metric} = {best_fold_accuracy}')
         print(f"Total time for the evaluation of the fold: {time_fold:.2f}s.")
         return best_fold_accuracy
 
