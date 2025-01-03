@@ -52,7 +52,7 @@ class RFC(sklearn.ensemble.RandomForestClassifier):
         self.n_jobs = n_jobs  # The number of jobs to run in parallel
         self.random_state = random_state  # The value that controls both the randomness of the bootstrapping of the samples used when building trees and the sampling of the features to consider when looking for the best split at each node
         self.verbose = verbose  # The value that controls the verbosity when fitting and predicting
-        self.warm_start = warm_start  # The choice to reuse the solution of the previous call to fit and add mor estimators to the ensemble or to just fit a whole new forest
+        self.warm_start = warm_start  # The choice to reuse the solution of the previous call to fit and add more estimators to the ensemble or to just fit a whole new forest
         self.class_weight = class_weight  # The weights associated with classes
         self.ccp_alpha = ccp_alpha  # The complexity parameter used for Minimal Cost-Complexity Pruning
         self.max_samples = max_samples  # The number of samples to draw from X to train each base estimator if bootstrap is used
@@ -75,8 +75,8 @@ class RFC(sklearn.ensemble.RandomForestClassifier):
         if args.normalization:
             X = add_normalization(X, len(le_species.classes_))  # Add normalized features
         std_acc = []
-        avg_acc = 0.0  # Initialize variables to track the average accuracy
-        n_samples = 0  # Initialize variables to track the number of samples
+        avg_acc = 0.0  # Initialize variable to track the average accuracy
+        n_samples = 0  # Initialize variable to track the number of samples
         split_assignments = get_split_assignments(args)  # Get split assignments for cross-validation
         best_accuracy = -np.inf  # Initialize variable to track the best accuracy
         best_fold = -1  # Initialize variable to track the best fold
@@ -132,7 +132,7 @@ class RFC(sklearn.ensemble.RandomForestClassifier):
         if args.noise:
             X = add_noise(X, len(le_species.classes_))  # Add noise to the features
         if args.log:
-            X = add_log(X, len(le_species.classes_))  # Apply logarithm to the feature
+            X = add_log(X, len(le_species.classes_))  # Apply logarithm to the features
         if args.features != ['all']:
             features = ''.join(args.features).replace(' ', '').split(',')
             X = remove_features(args, X, features)  # Remove specified features
