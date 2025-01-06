@@ -29,7 +29,7 @@ class TNC(pytorch_tabnet.tab_model.TabNetClassifier):
             n_shared (int, optional): The number of shared Gated Linear Units at each step. Defaults to 3.
             epsilon (float, optional): The value should be left untouched. Defaults to 1e-15.
             seed (int, optional): The random seed for reproducibility. Defaults to 123.
-            momentum (float, optional): The momentum for batch normalization.Defaults to 0.02.
+            momentum (float, optional): The momentum for batch normalization. Defaults to 0.02.
             clip_value (float | tuple, optional): The gradient will be clipped at the given value. Defaults to None.
             lambda_sparse (float, optional): The extra sparsity loss coefficient. Defaults to 1e-3.
             optimizer_fn (callable, optional): The PyTorch optimizer function. Defaults to 'adam'.
@@ -64,16 +64,16 @@ class TNC(pytorch_tabnet.tab_model.TabNetClassifier):
         self.optimizer_fn = optimizer_fn  # The PyTorch optimizer function
         self.optimizer_params = optimizer_params  # The parameters compatible with the PyTorch optimizer function used to initialize the optimizer
         self.scheduler_fn = scheduler_fn  # The PyTorch scheduler to change learning rates during training
-        self.scheduler_params = scheduler_params  # The dictionnary of parameters to apply to the PyTorch scheduler
+        self.scheduler_params = scheduler_params  # The dictionary of parameters to apply to the PyTorch scheduler
         self.model_name = model_name  # The name of the model used for saving in disk
         self.verbose = verbose  # The verbosity for notebooks plots
         self.device_name = device_name  # The name of the device used for training
         self.input_dim = input_dim  # The number of input features
         self.output_dim = output_dim  # The number of output classes
-        self.mask_type = mask_type  # The masking function to use for selection features
+        self.mask_type = mask_type  # The masking function to use for selecting features
         self.grouped_features = grouped_features  # The groups to allow the model to share its attention across features inside a same group
-        self.n_shared_decoder = n_shared_decoder  # The number of shared GLU block in decoder
-        self.n_indep_decoder = n_indep_decoder  # The number of independent GLU block in decoder
+        self.n_shared_decoder = n_shared_decoder  # The number of shared GLU blocks in decoder
+        self.n_indep_decoder = n_indep_decoder  # The number of independent GLU blocks in decoder
 
     def evaluate_model(self, args, X, y, le_species, le_header):
         """
@@ -150,7 +150,7 @@ class TNC(pytorch_tabnet.tab_model.TabNetClassifier):
         if args.noise:
             X = add_noise(X, len(le_species.classes_))  # Add noise to the features
         if args.log:
-            X = add_log(X, len(le_species.classes_))  # Apply logarithm to the feature
+            X = add_log(X, len(le_species.classes_))  # Apply logarithm to the features
         if args.features != ['all']:
             features = ''.join(args.features).replace(' ', '').split(',')
             X = remove_features(args, X, features)  # Remove specified features
