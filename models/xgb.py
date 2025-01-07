@@ -203,7 +203,7 @@ class XGB(xgboost.XGBClassifier):
         if model.best_iteration + args.early_stopping_rounds <= args.n_estimators:
             print(f'Early stopping occurred at iteration {model.best_iteration + args.early_stopping_rounds} with best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}%.')
         else:
-            print(f'Early stopping dit not occur as best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}')
+            print(f'Early stopping did not occur as best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}')
         set_xgb_model(args, model)  # Set the trained model for future use
         print("\nSuccessfully saved model at Models/XGB.json")
         
@@ -304,7 +304,7 @@ class XGB(xgboost.XGBClassifier):
         if model.best_iteration + args.early_stopping_rounds <= args.n_estimators:
             print(f'\nEarly stopping occurred at iteration {model.best_iteration + 10} with best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}.')
         else:
-            print(f'\nEarly stopping dit not occur as best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}')
+            print(f'\nEarly stopping did not occur as best iteration = {model.best_iteration} and best {args.metric} = {accuracy:.4f}')
         print(f"Time: {time_fold:.2f}s.")  # Print the time taken for the fold evaluation
         return accuracy
 
