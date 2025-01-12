@@ -115,7 +115,7 @@ for fold in range(2):
             break
             
     if no_improvement_epochs != 10:
-        print(f'Early stopping dit not occur as best epoch = {best_epoch} and best accuracy = {best_fold_accuracy:.4f}%\n')
+        print(f'Early stopping did not occur as best epoch = {best_epoch} and best accuracy = {best_fold_accuracy:.4f}%\n')
 
     models[f'fold_{fold}'] = model.state_dict()
 
