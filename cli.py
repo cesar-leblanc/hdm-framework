@@ -18,7 +18,7 @@ def add_all_parsers(parser):
         _add_training_parser(parser)  # Add corresponding parser
     elif parser.parse_known_args()[0].pipeline == 'prediction':  # Check if the selected pipeline is "prediction"
         _add_prediction_parser(parser)  # Add corresponding parser
-    if parser.parse_known_args()[0].pipeline in ['evaluation', 'training', 'prediction']:  # Check if the selected pipeline is "evaluation", "tranining" or "prediction"
+    if parser.parse_known_args()[0].pipeline in ['evaluation', 'training', 'prediction']:  # Check if the selected pipeline is "evaluation", "training" or "prediction"
         if parser.parse_known_args()[0].model == 'mlp':  # Check if the selected model is MLP
             _add_mlp_parser(parser)  # Add corresponding parser
         elif parser.parse_known_args()[0].model == 'rfc':  # Check if the selected model is RFC
