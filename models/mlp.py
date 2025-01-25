@@ -70,7 +70,7 @@ class MLP(torch.nn.Module):
 
     def forward(self, x):
         """
-        Forward pass of the HabitatModel.
+        Forward pass of the MLP model.
 
         Args:
             x (torch.Tensor): Input tensor.
@@ -106,8 +106,8 @@ class MLP(torch.nn.Module):
         if args.normalization:
             X = add_normalization(X, len(le_species.classes_))  # Add normalized features to the input data
         std_acc = []
-        avg_acc = 0.0  # Initialize variables to track the average accuracy
-        n_samples = 0  # Initialize variables to track the number of samples
+        avg_acc = 0.0  # Initialize variable to track the average accuracy
+        n_samples = 0  # Initialize variable to track the number of samples
         split_assignments = get_split_assignments(args)
         best_accuracy = -np.inf
         best_fold = -1
