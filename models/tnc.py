@@ -93,8 +93,8 @@ class TNC(pytorch_tabnet.tab_model.TabNetClassifier):
         if args.normalization:
             X = add_normalization(X, len(le_species.classes_))  # Add normalized features
         std_acc = []
-        avg_acc = 0.0  # Initialize variables to track the average accuracy
-        n_samples = 0  # Initialize variables to track the number of samples
+        avg_acc = 0.0  # Initialize variable to track the average accuracy
+        n_samples = 0  # Initialize variable to track the number of samples
         split_assignments = get_split_assignments(args)  # Get split assignments for cross-validation
         best_accuracy = -np.inf  # Initialize variable to track the best accuracy
         best_fold = -1  # Initialize variable to track the best fold
