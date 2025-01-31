@@ -122,8 +122,8 @@ class XGB(xgboost.XGBClassifier):
         if args.normalization:
             X = add_normalization(X, len(le_species.classes_))  # Perform normalization on the features
         std_acc = []
-        avg_acc = 0.0  # Initialize variables to track the average accuracy
-        n_samples = 0  # Initialize variables to track the number of samples
+        avg_acc = 0.0  # Initialize variable to track the average accuracy
+        n_samples = 0  # Initialize variable to track the number of samples
         split_assignments = get_split_assignments(args)  # Get assignments of samples to folds
         best_accuracy = -np.inf
         best_fold = -1
