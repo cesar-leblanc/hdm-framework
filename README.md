@@ -181,6 +181,10 @@ Some changes can be made from this command to predict differently. Here is an ex
 python main.py --pipeline 'prediction' --model 'xgb' --features 'species' --gbif_normalization False
 ```
 
+<div align="center">
+  <img src="Images/tasks.png" alt="Project tasks" width="1000">
+</div>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🧠 Models
