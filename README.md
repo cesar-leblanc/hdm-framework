@@ -309,6 +309,7 @@ hdm-framework is currently maintained by [César Leblanc](https://github.com/ces
     │   ├── hdm-framework.pdf              <- Overview of hdm-framework image.
     │   ├── logo.png                       <- Project logo image.
     │   ├── neuron-based_models.pdf        <- Key aspect of neuron-based models image.
+    │   ├── tasks.png                      <- List of tasks image.
     │   ├── transformer-based_models.pdf   <- Key aspect of transformer-based models image.
     │   └── tree-based_models.pdf          <- Key aspect of tree-based models image.
     │
