@@ -122,7 +122,7 @@ Make sure to place the species and header data files inside the `Datasets` folde
 
 ### Dataset
 
-To pre-process the data from the European Vegetation Archive and create the input data and the target labels, run the following command:
+To pre-process the data from the EVA and create the input data and the target labels, run the following command:
 ```script
 python main.py --pipeline 'dataset' 
 ```
