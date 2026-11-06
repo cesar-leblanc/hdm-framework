@@ -373,7 +373,7 @@ class FTT(rtdl.FTTransformer):
         print('Epoch {} completed.'.format(epoch))  # Print Epoch
         print('LR: {}.'.format(optimizer.param_groups[0]['lr']))  # Print Learning Rate
         print(f"Time: {time_epoch:.2f}s.")  # Print Time
-        print(f'Accuracy: {accuracy_epoch   :.4f}%.')  # Print Accuracy
+        print(f'Accuracy: {accuracy_epoch:.4f}%.')  # Print Accuracy
         print('-'*30)
         model.train()  # Set the model back to training mode
         return accuracy_epoch, model
