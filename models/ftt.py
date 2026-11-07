@@ -295,7 +295,7 @@ class FTT(rtdl.FTTransformer):
             X_test, scaler = add_standardization(X_test, scaler=scaler)  # Apply standardization to the test set
         train_dataloader = add_dataloader(args, X_train, y_train, shuffle=True)  # Create a dataloader for the training set
         test_dataloader = add_dataloader(args, X_test, y_test, shuffle=False)  # Create a dataloader for the test set
-        model_parameters = get_model_parameters(args, X_train.shape[1], len(le_header.classes_))   # Get model parameters
+        model_parameters = get_model_parameters(args, X_train.shape[1], len(le_header.classes_))  # Get model parameters
         model = FTT(**model_parameters)  # Create an instance of the FTT model
         if args.criterion == 'imbal-noised-top-k':
             LastLinearLayer = NormedLinear
