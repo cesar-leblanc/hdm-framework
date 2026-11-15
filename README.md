@@ -256,7 +256,7 @@ It is strongly unadvised to:
 ## 🏢 Team
 
 `hdm-framework` is a community-driven project with several skillful engineers and researchers contributing to it.  
-hdm-framework is currently maintained by [César Leblanc](https://github.com/cesar-leblanc) with major contributions coming from [Alexis Joly](https://github.com/alexisjoly), [Pierre Bonnet](https://github.com/bonnetamap), [Maximilien Servajean](https://github.com/maximiliense), and the amazing people from the [Pl@ntNet Team](https://github.com/plantnet) in various forms and means.
+`hdm-framework` is currently maintained by [César Leblanc](https://github.com/cesar-leblanc) with major contributions coming from [Alexis Joly](https://github.com/alexisjoly), [Pierre Bonnet](https://github.com/bonnetamap), [Maximilien Servajean](https://github.com/maximiliense), and the amazing people from the [Pl@ntNet Team](https://github.com/plantnet) in various forms and means.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
