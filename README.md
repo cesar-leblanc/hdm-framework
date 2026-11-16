@@ -61,6 +61,9 @@ This framework aims to facilitate the training and sharing of Habitat Distributi
 
 ## ⏪ Prerequisites
 
+hdm-framework has been tested on the following system:
+- macOS: Sonoma (14.7.1)
+
 Python version 3.7 or higher and CUDA are required.
 
 On many systems Python comes pre-installed. You can try running the following command to check and see if a correct version is already installed:
