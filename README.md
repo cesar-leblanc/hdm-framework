@@ -61,8 +61,9 @@ This framework aims to facilitate the training and sharing of Habitat Distributi
 
 ## ⏪ Prerequisites
 
-hdm-framework has been tested on the following system:
+hdm-framework has been tested on the following systems:
 - macOS: Sonoma (14.7.1)
+- Linux: CentOS (7.4.1708)
 
 Python version 3.7 or higher and CUDA are required.
 
