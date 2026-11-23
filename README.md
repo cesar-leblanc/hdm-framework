@@ -64,6 +64,7 @@ This framework aims to facilitate the training and sharing of Habitat Distributi
 hdm-framework has been tested on the following systems:
 - macOS: Sonoma (14.7.1)
 - Linux: CentOS (7.4.1708)
+- Windows: 10 (22H2)
 
 Python version 3.7 or higher and CUDA are required.
 
